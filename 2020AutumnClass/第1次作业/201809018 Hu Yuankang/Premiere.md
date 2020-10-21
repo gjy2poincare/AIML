@@ -1,6 +1,6 @@
-#课堂笔记
+# 课堂笔记
 
-##一 环境配置
+## 一 环境配置
 
 * 安装git和用git clone克隆远程库
   git clone + 网站名
@@ -15,7 +15,7 @@
   2. 下载Github Desktop
   3. 与网站上的Github绑定
 
-##二 Step1及慕课学习
+## 二 Step1及慕课学习
 
 ### 权重的确定：
 
@@ -59,7 +59,7 @@ source liner 代码
 x=2*w+3*b
 factor_b=2*x+3*y，z对b作偏导
 
-##三 Step1代码理解
+## 三 Step1代码理解
 **1. 线性反向传播**
   * **def single_variable(w,b,t):
     print("\nsingle variable new: b ----- ")**
@@ -122,7 +122,7 @@ factor_b=2*x+3*y，z对b作偏导
         图示为二分类交叉熵：y=1 意味着当前样本标签值是1，当预测输出越接近1时，损失函数值越小，训练结果越准确。
       ![avatar](https://note.youdao.com/yws/api/personal/file/WEB750c833408a3ea9272c991e40671cbcb?method=download&shareKey=e67f998bb971dcd61cc40ae1181cf65f)
 
-##四 心得体会
+## 四 心得体会
 在本次学习中，我对于神经网络有了初步的理解，神经网络给我带来的高级和神秘感增加了我想探索的欲望，Step1主要告诉了我神经网络的一些基本概念，同时让我深刻领会了BP反向传播的含义，梯度下降算法，损失函数的作用，相信通过后面的学习可以让我对神经网络有更多的认识。
    
 
