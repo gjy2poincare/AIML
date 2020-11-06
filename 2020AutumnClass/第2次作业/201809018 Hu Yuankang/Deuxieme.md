@@ -33,7 +33,7 @@ def calculate_b_1(X,Y,w,m):
 ![avatar](https://note.youdao.com/yws/api/personal/file/4F7CA1AC23D84F51B7DE2EFFA4935C23?method=download&shareKey=b746a06161291ba6e9fa6e99f0dd407c)
 
 ![avatar](https://note.youdao.com/yws/api/personal/file/8E3E5932FE9F476F9DC900871250111D?method=download&shareKey=9ff47f52056e7533d7bc58067fde3e58)
-###梯度下降法
+### 梯度下降法
 与最小二乘法的模型及损失函数相同，都为一个线性模型加均方差的损失函数，区别于最小二乘法，梯度下降利用导数传递误差，而最小二乘法从损失函数求导，直接求得数学解析解。
 ![avatar](https://note.youdao.com/yws/api/personal/file/ED8AE21FE4D24BC1847B1A682A1728E7?method=download&shareKey=fa0224a8d98034e68dbf3e79fa48a3b9)
 
@@ -80,7 +80,7 @@ def calculate_b_1(X,Y,w,m):
 **Python中的矩阵减法运算，不需要对矩阵中的每个对应的元素单独做减法，而是整个矩阵相减即可。做求和运算时，也不需要自己写代码做遍历每个元素，而是简单地调用求和函数即可。**
 注意在代码中np.dot（）与sum（）函数。
 
-###单样本随机梯度下降（SGD）
+### 单样本随机梯度下降（SGD）
 
 #### 特点
   
@@ -97,7 +97,7 @@ def calculate_b_1(X,Y,w,m):
   - 缺点：batch size的数值选择很关键，会影响训练结果。
 ![avatar](https://note.youdao.com/yws/api/personal/file/8BEA3B8ED1624ABF82EE1D026DCA8A69?method=download&shareKey=232bd11be803806443134020a47903e8)
 ![avatar](https://note.youdao.com/yws/api/personal/file/3CC9F37FFE9B46C8817D0AAEEA612AA7?method=download&shareKey=4dccca9c1c5d66f2ef73196945936571)
-###全批量样本梯度下降
+### 全批量样本梯度下降
 
 #### 特点
 
@@ -113,14 +113,14 @@ def calculate_b_1(X,Y,w,m):
 - Iteration：迭代，一次正向 + 一次反向。
 - Epoch：所有样本被使用了一次，叫做一个Epoch，
 
-###梯度下降总结
+### 梯度下降总结
 * Batch Size增大了，要到达相同的准确度，必须要增大epoch。
 * 通过并行化提高内存的利用率。就是尽量让你的GPU满载运行，提高训练速度。 
 * 适当Batch Size使得梯度下降方向更加准确。
 
 ## 二 多变量线性回归
 
-###正规方程法
+### 正规方程法
 ![avatar](https://note.youdao.com/yws/api/personal/file/8AA5DEA53DFB407380D2935636B2A19D?method=download&shareKey=e448ad6273a33ed9c5b2fb7750a8000c)
 ![avatar](https://note.youdao.com/yws/api/personal/file/C81264059E1148EBB8059A2464D24957?method=download&shareKey=ebb15620099eecafc16dbcb8e82ca9b7)
 
@@ -240,6 +240,7 @@ self.B = np.zeros((1, self.params.output_size))
 * 训练一对多分类器时，是把蓝色样本当作一类，把红色和绿色样本混在一起当作另外一类。训练一对一分类器时，是把绿色样本扔掉，只考虑蓝色样本和红色样本。而我们在此并没有这样做，三类样本是同时参与训练的。所以我们只能说神经网络从结果上看，是一种一对多的方式。
 
 损失函数特征记录:
+```Python
 class LossFunction(object):
     # fcFunc: feed forward calculation
     def CheckLoss(self, A, Y):
@@ -253,6 +254,7 @@ class LossFunction(object):
         #end if
         return loss
     # end def
+```
 ![avatar](https://note.youdao.com/yws/api/personal/file/D83D3AB5ECEF4D5699E3CF7EE11AF619?method=download&shareKey=91086fb5d64981a198c6844c4e029d07)
 
 ## 三 学习心得
