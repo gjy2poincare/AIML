@@ -729,3 +729,5 @@ def show_contour(ax, loss_history, optimizer):
 - 批量归一化
 - 梯度下降优化算法
 - 自适应学习率算法
+
+ 正则化的目的是防止过拟合以及正则化的本质是约束要优化的参数
